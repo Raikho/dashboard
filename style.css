@@ -48,9 +48,7 @@ body {
     max-height: 1.25rem; 
     justify-self: center;
 }
-.sidebar-group>a>div {
-    align-self: center;
-}
+.sidebar-group>a>div {align-self: center;}
 .sidebar-group a {text-decoration: none; color: inherit;}
 .sidebar-group.title img {max-height: 2rem;}
 .sidebar-group.title {font-size: 1.5rem;}
@@ -59,10 +57,48 @@ body {
     grid-area: header;
     background-color: var(--white);
     color: var(--black);
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    box-shadow: 4px 4px 4px #0003;
+    z-index: 1;
+}
+.header>div {
+    border: 1px dotted blue;
+    display: flex;
+    flex: 1;
+}
+.header>div>div {
+    border: 1px dotted red;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.top {
+    gap: 10%;
+}
+.search {
+    flex: 1;
+}
+.account {
+    flex: 0;
+}
+.bottom {
+    justify-content: space-between;
+    
 }
 
+.search-bar {
+    flex: 1;
+    background-color: var(--gray);
+    border-radius: 20px;
+    height: 20px;
+}
+.account, .actions {justify-content: end;}
+.header img {max-height: 25px;}
+
 .main {
-    grid-area: header;
-    background-color: var(--white);
+    grid-area: main;
+    background-color: var(--gray);
     color: var(--black);
 }
