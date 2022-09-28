@@ -1,5 +1,5 @@
 :root {
-    --white: #eff6ff;
+    --white: #f8fafc;
     --gray: #cbd5e1;
     --black: #000;
     --accent1: #0284c7;
@@ -11,4 +11,32 @@ body {
     color: var(--black);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
+    margin: 0;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 5fr;
+    grid-template-areas: "sidebar header" "sidebar main";
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: var(--accent1);
+    color: var(--white);
+}
+
+.header {
+    grid-area: header;
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.main {
+    grid-area: main;
+    background-color: var(--gray);
+    color: var(--black);
 }
