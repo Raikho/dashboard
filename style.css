@@ -63,16 +63,15 @@ body {
     box-shadow: 4px 4px 4px #0003;
     z-index: 1;
 }
+
 .header>.top {
     flex: 1;
-    border: 1px dotted blue;
+    /* border: 1px dotted blue; */
 
     display: flex;
-    flex-direction: row;
     align-items: center;
     gap: 10px;
 }
-
 button.search-icon {
     -webkit-mask-image: url(img/search.svg);
     mask-image: url(img/search.svg);
@@ -103,6 +102,43 @@ button.profile-picture {
     width: 40px;
 }
 .account {font-weight: 700;}
+
+.header>.bottom {
+    flex: 1;
+    /* border: 1px dotted blue; */
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.profile-picture-large {
+    -webkit-mask-image: url(img/profile-picture.svg);
+    mask-image: url(img/profile-picture.svg);
+    background-color: var(--accent2);
+    height: 60px;
+    width: 60px;
+}
+.greeting {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.greeting-start {font-weight: 700; font-size: .75rem}
+.greeting-name {font-weight: 700; font-size: 1.4rem}
+.actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+.actions>button {
+    background-color: var(--accent1);
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    color: white;
+    font-size: .75rem;
+    font-weight: 700;
+}
 
 .main {
     grid-area: main;
