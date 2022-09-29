@@ -69,14 +69,16 @@ body {
 
     display: flex;
     flex-direction: row;
-    gap: 20px;
-}
-.search-bar {
+    align-items: center;
+    gap: 10px;
 }
 
-.header>.top>button {
-    border: none;
-    height: fit-content;
+button.search-icon {
+    -webkit-mask-image: url(img/search.svg);
+    mask-image: url(img/search.svg);
+    background-color: var(--black);
+    height: 20px;
+    width: 20px;
 }
 .search-bar {
     flex: 1;
@@ -84,9 +86,23 @@ body {
     background-color: var(--gray);
     border: none;
     border-radius: 20px;
-    height: fit-content;
+    height: 20px;
 }
-.header img {max-height: 25px;}
+button.notifications {
+    -webkit-mask-image: url(img/notifications.svg);
+    mask-image: url(img/notifications.svg);
+    background-color: var(--black);
+    height: 20px;
+    width: 20px;
+}
+button.profile-picture {
+    -webkit-mask-image: url(img/profile-picture.svg);
+    mask-image: url(img/profile-picture.svg);
+    background-color: var(--accent2);
+    height: 40px;
+    width: 40px;
+}
+.account {font-weight: 700;}
 
 .main {
     grid-area: main;
