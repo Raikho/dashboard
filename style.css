@@ -231,4 +231,33 @@ button.profile-picture {
     padding: 0;
     margin: 0;
     border-left: 8px solid var(--accent2);
+
+    display: grid;
+    grid-template-columns: 1fr 20px 20px 20px;
+    grid-template-rows: min-content 1fr 20px;
+    grid-template-areas: 
+    "title title title title"
+    "body body body body"
+    ". favorite explore share";
+    padding: 20px;
+    column-gap: 10px;
 }
+.projects.card .title {grid-area: title;}
+.projects.card .body {grid-area: body;}
+.projects.card .favorite {grid-area: favorite;}
+.projects.card .explore {grid-area: explore;}
+.projects.card .share {grid-area: share;}
+.projects.card .body {font-size: .75rem; color: var(--offblack);}
+.favorite {
+    -webkit-mask-image: url(img/favorite.svg);
+    mask-image: url(img/favorite.svg);
+}
+.explore {
+    -webkit-mask-image: url(img/explore.svg);
+    mask-image: url(img/explore.svg);
+}
+.share {
+    -webkit-mask-image: url(img/share.svg);
+    mask-image: url(img/share.svg);
+}
+.favorite, .explore, .share {background-color: var(--black);}
