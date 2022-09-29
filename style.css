@@ -2,6 +2,7 @@
     --white: #f8fafc;
     --gray: #cbd5e1;
     --black: #000;
+    --offblack: #1e293b;
     --accent1: #0284c7;
     --accent2: #ca8a04;
 }
@@ -184,6 +185,7 @@ button.profile-picture {
 }
 
 .announcements>.subcard.group>.content {
+    color: var(--offblack);
     font-size: .75em;
     padding-bottom: 20px;
     border-bottom : 1px solid var(--gray);
@@ -191,4 +193,28 @@ button.profile-picture {
 .announcements>.subcard.group:last-child>.content {
     padding-bottom: 0;
     border-bottom: none;
+}
+
+.trending.card>.group {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "icon title"
+    "icon content";
+}
+.trending.card>.group>.icon {grid-area: icon;}
+.trending.card>.group>.title {font-weight: 400;}
+.trending.card>.group>.content {
+    color: var(--offblack);
+    font-size: .75rem;
+}
+.subcard.icon {
+    -webkit-mask-image: url(img/circle.svg);
+    mask-image: url(img/circle.svg);
+    background-color: var(--accent2);
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+    align-self: center;
 }
