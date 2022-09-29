@@ -63,38 +63,29 @@ body {
     box-shadow: 4px 4px 4px #0003;
     z-index: 1;
 }
-.header>div {
-    border: 1px dotted blue;
-    display: flex;
+.header>.top {
     flex: 1;
-}
-.header>div>div {
-    border: 1px dotted red;
+    border: 1px dotted blue;
+
     display: flex;
-    align-items: center;
+    flex-direction: row;
     gap: 20px;
 }
-.top {
-    gap: 10%;
-}
-.search {
-    flex: 1;
-}
-.account {
-    flex: 0;
-}
-.bottom {
-    justify-content: space-between;
-    
+.search-bar {
 }
 
+.header>.top>button {
+    border: none;
+    height: fit-content;
+}
 .search-bar {
     flex: 1;
+    margin-right: 10%;
     background-color: var(--gray);
+    border: none;
     border-radius: 20px;
-    height: 20px;
+    height: fit-content;
 }
-.account, .actions {justify-content: end;}
 .header img {max-height: 25px;}
 
 .main {
