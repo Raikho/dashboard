@@ -144,4 +144,17 @@ button.profile-picture {
     grid-area: main;
     background-color: var(--gray);
     color: var(--black);
+
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "projects announcements"
+        "projects trending";
+    padding: 20px;
+    gap: 20px;
 }
+.main>div {border: 1px dashed black;}
+.projects-group {grid-area: projects;}
+.announcements-group {grid-area: announcements;}
+.trending-group {grid-area: trending;}
